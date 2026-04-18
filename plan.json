@@ -1,75 +1,363 @@
-
-Terraform used the selected providers to generate the following execution
-plan. Resource actions are indicated with the following symbols:
-  + create
-
-Terraform will perform the following actions:
-
-  # google_compute_disk.grafana_disk will be created
-  + resource "google_compute_disk" "grafana_disk" {
-      + access_mode                 = (known after apply)
-      + creation_timestamp          = (known after apply)
-      + disk_id                     = (known after apply)
-      + effective_labels            = (known after apply)
-      + enable_confidential_compute = (known after apply)
-      + id                          = (known after apply)
-      + label_fingerprint           = (known after apply)
-      + last_attach_timestamp       = (known after apply)
-      + last_detach_timestamp       = (known after apply)
-      + licenses                    = (known after apply)
-      + name                        = "grafana-disk"
-      + physical_block_size_bytes   = (known after apply)
-      + project                     = "weighty-media-490201-s3"
-      + provisioned_iops            = (known after apply)
-      + provisioned_throughput      = (known after apply)
-      + self_link                   = (known after apply)
-      + size                        = 10
-      + source_disk_id              = (known after apply)
-      + source_image_id             = (known after apply)
-      + source_snapshot_id          = (known after apply)
-      + terraform_labels            = (known after apply)
-      + type                        = "pd-standard"
-      + users                       = (known after apply)
-      + zone                        = "us-central1-a"
-
-      + guest_os_features (known after apply)
+{
+  "format_version": "1.2",
+  "terraform_version": "1.14.8",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "google_compute_disk.grafana_disk",
+          "mode": "managed",
+          "type": "google_compute_disk",
+          "name": "grafana_disk",
+          "provider_name": "registry.terraform.io/hashicorp/google",
+          "schema_version": 0,
+          "values": {
+            "async_primary_disk": [],
+            "description": null,
+            "disk_encryption_key": [],
+            "image": null,
+            "labels": null,
+            "name": "grafana-disk",
+            "project": "weighty-media-490201-s3",
+            "size": 10,
+            "snapshot": null,
+            "source_disk": null,
+            "source_image_encryption_key": [],
+            "source_snapshot_encryption_key": [],
+            "storage_pool": null,
+            "timeouts": null,
+            "type": "pd-standard",
+            "zone": "us-central1-a"
+          },
+          "sensitive_values": {
+            "async_primary_disk": [],
+            "disk_encryption_key": [],
+            "effective_labels": {},
+            "guest_os_features": [],
+            "licenses": [],
+            "source_image_encryption_key": [],
+            "source_snapshot_encryption_key": [],
+            "terraform_labels": {},
+            "users": []
+          }
+        },
+        {
+          "address": "google_compute_network.snail",
+          "mode": "managed",
+          "type": "google_compute_network",
+          "name": "snail",
+          "provider_name": "registry.terraform.io/hashicorp/google",
+          "schema_version": 0,
+          "values": {
+            "auto_create_subnetworks": false,
+            "delete_default_routes_on_create": false,
+            "description": null,
+            "enable_ula_internal_ipv6": null,
+            "mtu": 1460,
+            "name": "snail",
+            "network_firewall_policy_enforcement_order": "AFTER_CLASSIC_FIREWALL",
+            "project": "weighty-media-490201-s3",
+            "routing_mode": "REGIONAL",
+            "timeouts": null
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "google_project_service.compute",
+          "mode": "managed",
+          "type": "google_project_service",
+          "name": "compute",
+          "provider_name": "registry.terraform.io/hashicorp/google",
+          "schema_version": 0,
+          "values": {
+            "disable_dependent_services": null,
+            "disable_on_destroy": false,
+            "project": "weighty-media-490201-s3",
+            "service": "compute.googleapis.com",
+            "timeouts": null
+          },
+          "sensitive_values": {}
+        },
+        {
+          "address": "google_project_service.container",
+          "mode": "managed",
+          "type": "google_project_service",
+          "name": "container",
+          "provider_name": "registry.terraform.io/hashicorp/google",
+          "schema_version": 0,
+          "values": {
+            "disable_dependent_services": null,
+            "disable_on_destroy": false,
+            "project": "weighty-media-490201-s3",
+            "service": "container.googleapis.com",
+            "timeouts": null
+          },
+          "sensitive_values": {}
+        }
+      ]
     }
-
-  # google_compute_network.snail will be created
-  + resource "google_compute_network" "snail" {
-      + auto_create_subnetworks                   = false
-      + delete_default_routes_on_create           = false
-      + gateway_ipv4                              = (known after apply)
-      + id                                        = (known after apply)
-      + internal_ipv6_range                       = (known after apply)
-      + mtu                                       = 1460
-      + name                                      = "snail"
-      + network_firewall_policy_enforcement_order = "AFTER_CLASSIC_FIREWALL"
-      + numeric_id                                = (known after apply)
-      + project                                   = "weighty-media-490201-s3"
-      + routing_mode                              = "REGIONAL"
-      + self_link                                 = (known after apply)
+  },
+  "resource_changes": [
+    {
+      "address": "google_compute_disk.grafana_disk",
+      "mode": "managed",
+      "type": "google_compute_disk",
+      "name": "grafana_disk",
+      "provider_name": "registry.terraform.io/hashicorp/google",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "async_primary_disk": [],
+          "description": null,
+          "disk_encryption_key": [],
+          "image": null,
+          "labels": null,
+          "name": "grafana-disk",
+          "project": "weighty-media-490201-s3",
+          "size": 10,
+          "snapshot": null,
+          "source_disk": null,
+          "source_image_encryption_key": [],
+          "source_snapshot_encryption_key": [],
+          "storage_pool": null,
+          "timeouts": null,
+          "type": "pd-standard",
+          "zone": "us-central1-a"
+        },
+        "after_unknown": {
+          "access_mode": true,
+          "async_primary_disk": [],
+          "creation_timestamp": true,
+          "disk_encryption_key": [],
+          "disk_id": true,
+          "effective_labels": true,
+          "enable_confidential_compute": true,
+          "guest_os_features": true,
+          "id": true,
+          "label_fingerprint": true,
+          "last_attach_timestamp": true,
+          "last_detach_timestamp": true,
+          "licenses": true,
+          "physical_block_size_bytes": true,
+          "provisioned_iops": true,
+          "provisioned_throughput": true,
+          "self_link": true,
+          "source_disk_id": true,
+          "source_image_encryption_key": [],
+          "source_image_id": true,
+          "source_snapshot_encryption_key": [],
+          "source_snapshot_id": true,
+          "terraform_labels": true,
+          "users": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "async_primary_disk": [],
+          "disk_encryption_key": [],
+          "effective_labels": {},
+          "guest_os_features": [],
+          "licenses": [],
+          "source_image_encryption_key": [],
+          "source_snapshot_encryption_key": [],
+          "terraform_labels": {},
+          "users": []
+        }
+      }
+    },
+    {
+      "address": "google_compute_network.snail",
+      "mode": "managed",
+      "type": "google_compute_network",
+      "name": "snail",
+      "provider_name": "registry.terraform.io/hashicorp/google",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "auto_create_subnetworks": false,
+          "delete_default_routes_on_create": false,
+          "description": null,
+          "enable_ula_internal_ipv6": null,
+          "mtu": 1460,
+          "name": "snail",
+          "network_firewall_policy_enforcement_order": "AFTER_CLASSIC_FIREWALL",
+          "project": "weighty-media-490201-s3",
+          "routing_mode": "REGIONAL",
+          "timeouts": null
+        },
+        "after_unknown": {
+          "gateway_ipv4": true,
+          "id": true,
+          "internal_ipv6_range": true,
+          "numeric_id": true,
+          "self_link": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "google_project_service.compute",
+      "mode": "managed",
+      "type": "google_project_service",
+      "name": "compute",
+      "provider_name": "registry.terraform.io/hashicorp/google",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "disable_dependent_services": null,
+          "disable_on_destroy": false,
+          "project": "weighty-media-490201-s3",
+          "service": "compute.googleapis.com",
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
+    },
+    {
+      "address": "google_project_service.container",
+      "mode": "managed",
+      "type": "google_project_service",
+      "name": "container",
+      "provider_name": "registry.terraform.io/hashicorp/google",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "disable_dependent_services": null,
+          "disable_on_destroy": false,
+          "project": "weighty-media-490201-s3",
+          "service": "container.googleapis.com",
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {}
+      }
     }
-
-  # google_project_service.compute will be created
-  + resource "google_project_service" "compute" {
-      + disable_on_destroy = false
-      + id                 = (known after apply)
-      + project            = "weighty-media-490201-s3"
-      + service            = "compute.googleapis.com"
+  ],
+  "configuration": {
+    "provider_config": {
+      "google": {
+        "name": "google",
+        "full_name": "registry.terraform.io/hashicorp/google",
+        "version_constraint": "~> 5.0",
+        "expressions": {
+          "project": {
+            "constant_value": "weighty-media-490201-s3"
+          },
+          "region": {
+            "constant_value": "us-central1"
+          }
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "google_compute_disk.grafana_disk",
+          "mode": "managed",
+          "type": "google_compute_disk",
+          "name": "grafana_disk",
+          "provider_config_key": "google",
+          "expressions": {
+            "name": {
+              "constant_value": "grafana-disk"
+            },
+            "size": {
+              "constant_value": 10
+            },
+            "type": {
+              "constant_value": "pd-standard"
+            },
+            "zone": {
+              "constant_value": "us-central1-a"
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "google_compute_network.snail",
+          "mode": "managed",
+          "type": "google_compute_network",
+          "name": "snail",
+          "provider_config_key": "google",
+          "expressions": {
+            "auto_create_subnetworks": {
+              "constant_value": false
+            },
+            "delete_default_routes_on_create": {
+              "constant_value": false
+            },
+            "mtu": {
+              "constant_value": 1460
+            },
+            "name": {
+              "constant_value": "snail"
+            },
+            "routing_mode": {
+              "constant_value": "REGIONAL"
+            }
+          },
+          "schema_version": 0,
+          "depends_on": [
+            "google_project_service.compute",
+            "google_project_service.container"
+          ]
+        },
+        {
+          "address": "google_project_service.compute",
+          "mode": "managed",
+          "type": "google_project_service",
+          "name": "compute",
+          "provider_config_key": "google",
+          "expressions": {
+            "disable_on_destroy": {
+              "constant_value": false
+            },
+            "service": {
+              "constant_value": "compute.googleapis.com"
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "google_project_service.container",
+          "mode": "managed",
+          "type": "google_project_service",
+          "name": "container",
+          "provider_config_key": "google",
+          "expressions": {
+            "disable_on_destroy": {
+              "constant_value": false
+            },
+            "service": {
+              "constant_value": "container.googleapis.com"
+            }
+          },
+          "schema_version": 0
+        }
+      ]
     }
-
-  # google_project_service.container will be created
-  + resource "google_project_service" "container" {
-      + disable_on_destroy = false
-      + id                 = (known after apply)
-      + project            = "weighty-media-490201-s3"
-      + service            = "container.googleapis.com"
-    }
-
-Plan: 4 to add, 0 to change, 0 to destroy.
-
-─────────────────────────────────────────────────────────────────────────────
-
-Note: You didn't use the -out option to save this plan, so Terraform can't
-guarantee to take exactly these actions if you run "terraform apply" now.
+  },
+  "timestamp": "2026-04-18T20:15:57Z",
+  "applyable": true,
+  "complete": true,
+  "errored": false
+}
